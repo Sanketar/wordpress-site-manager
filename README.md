@@ -1,4 +1,4 @@
-# wordpress-site-manager
+# Wordpress-Site-Manager
 This script allows you to easily manage WordPress sites using Docker containers and docker-compose.
 
 ## Installation
@@ -46,6 +46,12 @@ To enable or disable the site, use the following command:
 python script.py enable|disable
 ```
 Replace enable with disable to disable the site. This command will start or stop the Docker containers for the specified site.
+
+enable: Enables the site.
+Description: This command enables the site, allowing it to be accessed and served.
+
+disable: Disables the site.
+Description: This command disables the site, temporarily preventing it from being accessed or served.
 
 ### Deleting the Site
 To delete the site, use the following command:
