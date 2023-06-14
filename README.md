@@ -7,55 +7,52 @@ Ensure that Docker is installed on your system. If Docker is not installed, you 
 ```
 sudo apt-get install docker
 ```
+
 Verify that Docker is installed correctly by running the following command:
-
-bash
-Copy code
+```
 docker --version
+```
+
 Install docker-compose by running the following command:
-
-bash
-Copy code
+```
 sudo apt-get install docker-compose
+```
+
 Verify that docker-compose is installed correctly by running the following command:
-
-bash
-Copy code
+```
 docker-compose --version
+```
+
+
 Clone this repository to your local machine using Git:
-
-bash
-Copy code
+```
 git clone https://github.com/Sanketar/wordpress-site-manager.git
+```
+
 Change to the project directory:
-
-bash
-Copy code
 cd wordpress-site-manager
-Usage
-Creating a WordPress Site
-To create a WordPress site, use the following command:
 
-bash
-Copy code
+## Usage
+### Creating a WordPress Site
+To create a WordPress site, use the following command:
+```
 python script.py create [site-name]
+```
 Replace [site-name] with the desired name for your WordPress site. This command will create a directory with the specified site name, generate a docker-compose.yml file, start the containers, and add an entry to the /etc/hosts file.
 
-Enabling or Disabling the Site
+### Enabling or Disabling the Site
 To enable or disable the site, use the following command:
-
-bash
-Copy code
+```
 python script.py enable|disable
+```
 Replace enable with disable to disable the site. This command will start or stop the Docker containers for the specified site.
 
-Deleting the Site
+### Deleting the Site
 To delete the site, use the following command:
-
-bash
-Copy code
+```
 python script.py delete
+```
 This command will stop the Docker containers, remove the site directory, and clean up all associated files.
 
-Contributing
+## Contributing
 Contributions are welcome! If you encounter any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request.
