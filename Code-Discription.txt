@@ -1,0 +1,20 @@
+The code is a script that simplifies the management of WordPress sites using Docker and docker-compose. It provides a set of functions and commands to create, enable/disable, and delete WordPress sites.
+The script starts by importing the required modules, which are os, subprocess, and sys. These modules are used for a variety of purposes across the code.
+Following that, many functions are defined to accomplish certain actions:
+•	The command_exists function checks if a particular command is available on the system. It uses the subprocess.call function to execute the command and checks the exit status.
+•	The install_packages function is responsible for installing missing packages. It uses the subprocess.call function to execute the package installation command.
+•	The create_wordpress_site function is used to create a WordPress site using Docker and docker-compose. It follows a series of steps:
+•	It creates a directory for the site and switches to that directory using the os module.
+•	It generates a configuration file called docker-compose.yml with the necessary settings for the MySQL database and WordPress services.
+•	It starts the Docker containers using the docker-compose up -d command.
+•	It adds an entry to the /etc/hosts file, mapping the site name to the localhost IP address.
+•	Finally, it displays a message instructing the user to open the site in their browser.
+Additionally, there are two more functions:
+•	The enable_disable_site function allows the user to enable or disable the site. It uses the docker-compose command with the appropriate action (start or stop) to control the Docker containers.
+•	The delete_site function is used to delete the WordPress site. It stops the Docker containers, navigates back to the parent directory, and removes the site directory.
+The main part of the script is enclosed in the if __name__ == "__main__": condition. It performs the following steps:
+•	It checks if the docker command is available and installs it if not.
+•	It checks if the docker-compose command is available and installs it if not.
+•	It checks if a command-line argument (site name) is provided. If not, it displays an error message.
+•	If a site name is provided, it retrieves the site name from the command-line argument and calls the create_wordpress_site function to create the WordPress site with the given name.
+In summary, this code simplifies the management of WordPress sites by automating the setup, configuration, and removal of Docker containers. It provides a user-friendly way to create, enable/disable, and delete WordPress sites using simple commands.
