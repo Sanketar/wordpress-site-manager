@@ -1,12 +1,12 @@
 # wordpress-site-manager
 This script allows you to easily manage WordPress sites using Docker containers and docker-compose.
 
-Installation
+## Installation
 Ensure that Docker is installed on your system. If Docker is not installed, you can install it by running the following command:
 
-bash
-Copy code
+```
 sudo apt-get install docker
+```
 Verify that Docker is installed correctly by running the following command:
 
 bash
