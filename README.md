@@ -47,10 +47,10 @@ python script.py enable|disable
 ```
 Replace enable with disable to disable the site. This command will start or stop the Docker containers for the specified site.
 
-enable: Enables the site.
+##### enable: Enables the site.
 Description: This command enables the site, allowing it to be accessed and served.
 
-disable: Disables the site.
+##### disable: Disables the site.
 Description: This command disables the site, temporarily preventing it from being accessed or served.
 
 ### Deleting the Site
